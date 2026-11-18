@@ -164,14 +164,22 @@ export default function HomePageClient() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <div className="container flex flex-col gap-3 py-5 text-sm sm:flex-row sm:items-center sm:justify-between">
-            <p className="inline-flex items-center gap-3 text-slate-300">
+          <div className="container flex flex-col gap-3 py-5 text-sm sm:flex-row sm:items-center sm:justify-between lg:flex-nowrap">
+            <p className="inline-flex shrink-0 items-center gap-3 text-slate-300">
               <span aria-hidden className="h-2 w-2 animate-pulse-dot rounded-full bg-brand" />
               {COMPANY.supportingLine}
             </p>
-            <ul className="flex flex-wrap gap-x-6 gap-y-1 text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
-              {SERVICES.map((s) => (
-                <li key={s.value}>{s.title}</li>
+            <ul className="flex flex-wrap gap-x-5 gap-y-1 text-xs font-medium uppercase tracking-[0.18em] text-slate-400 lg:flex-nowrap lg:gap-x-0">
+              {SERVICES.map((s, i) => (
+                <li
+                  key={s.value}
+                  className={cn(
+                    'whitespace-nowrap',
+                    i > 0 && 'lg:border-l lg:border-white/20 lg:pl-5 lg:ml-5',
+                  )}
+                >
+                  {s.title}
+                </li>
               ))}
             </ul>
           </div>
