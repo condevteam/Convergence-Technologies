@@ -62,7 +62,8 @@ export default function ContactPage() {
                     <MapPin aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
                     <span>
                       <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Location</span>
-                      {COMPANY.country}
+                      <span className="block">{COMPANY.address}</span>
+                      <span className="mt-1 block text-sm text-slate-400">{COMPANY.hours}</span>
                     </span>
                   </StaggerItem>
                 </StaggerContainer>

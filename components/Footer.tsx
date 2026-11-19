@@ -90,9 +90,12 @@ export default function Footer() {
                   {COMPANY.phone}
                 </a>
               </li>
-              <li className="inline-flex items-start gap-3">
+              <li className="flex items-start gap-3">
                 <MapPin aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-                {COMPANY.country}
+                <span>
+                  <span className="block">{COMPANY.address}</span>
+                  <span className="mt-1 block text-slate-500">{COMPANY.hours}</span>
+                </span>
               </li>
             </ul>
           </div>

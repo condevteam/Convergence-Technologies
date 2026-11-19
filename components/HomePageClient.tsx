@@ -329,7 +329,7 @@ export default function HomePageClient() {
                   <h3 className="mt-6 text-lg font-bold text-slate-900">{c.title}</h3>
                   <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted">{c.blurb}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">
-                    {c.href.startsWith('/contact') ? 'Request availability' : 'Learn more'}
+                    {'Request availability'}
                     <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>

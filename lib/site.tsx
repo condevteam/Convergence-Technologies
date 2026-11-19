@@ -30,6 +30,8 @@ export const COMPANY = {
   phone: '+94 11 206 3155',
   phoneHref: 'tel:+94112063155',
   country: 'Sri Lanka',
+  address: '10 A Kumarage Watta Road, Pelawatta, Battaramulla, Sri Lanka',
+  hours: 'Mon – Fri, 9:00 AM – 5:30 PM',
 } as const;
 
 /* -------------------------------------------------------------------------- */
@@ -168,7 +170,7 @@ export const INFRA_CATEGORIES: Category[] = [
     blurb:
       'Source the parts needed to maintain enterprise infrastructure, with assistance identifying models, part numbers, and compatibility requirements.',
     icon: Cpu,
-    href: '/oem-spare-parts',
+    href: contactHref('rentals'),
   },
 ];
 
